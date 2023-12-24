@@ -2,11 +2,9 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        int ticketPrice = 13676;
-        int bonusMile = 1;
-        int milesAccrued = ticketPrice / 20 * bonusMile;
-
+        CalcMilesService service = new CalcMilesService();
+        int ticketPrice = 10_000;
+        int milesAccrued = service.calculate(ticketPrice);
         System.out.println("Вам начислено: " + milesAccrued + " бонусных мили");
-
     }
 }
